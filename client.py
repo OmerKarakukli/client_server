@@ -1,11 +1,12 @@
+#!/usr/bin/env python3
 import socket
 
-IP = '192.168.1.30'
+IP = ''
 PORT = 5566
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((IP, PORT))
-print(f'connected to server\nIP: {IP}\nPORT: {PORT} ')
+print("Connected to server")
 
 while True:
     toSend = input('Data to send: ')

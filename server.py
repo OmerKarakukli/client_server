@@ -1,17 +1,18 @@
+#!/usr/bin/env python3
 import socket
 import select
 import serial
 
-arduinoSerialData = serial.Serial('COM4', 9600)
+arduinoSerialData = serial.Serial('/dev/ttyACM0', 115200)
 
-IP = '192.168.1.30'
+IP = ''
 PORT = 5566
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((IP, PORT))
 s.listen(5)
 clientscoket, address = s.accept()
-print(f'Connection from {address} has been established!')
+print("Accepted connection")
 
 while True:
     clientscoket.setblocking(False)
