@@ -1,2 +1,2 @@
 # python_client_server
-python client server TCP/UPD general implementation
+python TCP/UPD client server general implementation
